@@ -109,6 +109,9 @@
         alert("Please enter a URL or text");
         return;
       }
+      if (inputText.length > 1000) {
+        alert("Note: large url's will result in very detailed qr codes that may be difficult to scan");
+      }
 
       // Clear previous QR code
       qrcodeDiv.innerHTML = "";
