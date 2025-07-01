@@ -112,6 +112,10 @@
       if (inputText.length > 1000) {
         alert("Note: large url's will result in very detailed qr codes that may be difficult to scan");
       }
+      if (!inputText.includes("https://")) {
+        alert("Note: if the input text is not a link, scanning the qr code may just result in text.");
+      }
+
 
       // Clear previous QR code
       qrcodeDiv.innerHTML = "";
